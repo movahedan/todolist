@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+html,
+body, 
+#__next {
+  @apply w-full h-full p-0 m-0;
+  @apply text-gray-900 bg-gray-100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+i {
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  
+  html,
+  body, 
+  #__next {
+    @apply text-gray-100 bg-gray-900;
+  }
+}
+
+#__next {
+  @apply relative flex flex-col;
+  @apply max-w-screen h-screen;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
